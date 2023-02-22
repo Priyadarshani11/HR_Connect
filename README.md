@@ -11,6 +11,6 @@ HRConnect(project root directory)
   - venv  
   - My_utils
       - __init__.py
-      -csv_operations.py
+      - csv_operations.py
       
     

@@ -1,6 +1,4 @@
 ```markdown
-HRConnect (Project Root)
-
 PROJECT STRUCTURE
 
 HRConnect(project root directory)

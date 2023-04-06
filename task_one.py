@@ -9,51 +9,30 @@ be in following format
 }
 """
 
-
-from my_utils.csv_operations import HandleCSV
 from pprint import pprint
+from my_utils.csv_operations import HandleCSV
+
 
 data = HandleCSV.read_entire_csv()
 
+
 def main():
+    emp_details = {}
+    j = 1
+    for i in data:
+        if int(i["SALARY"]) > 9000:
+            phone_number = i["PHONE_NUMBER"].split(".")
+            phone_number = "".join(phone_number)
+            emp_details[j] = {
+                "name": (i["FIRST_NAME"] + " " + i["LAST_NAME"]),
+                "email": i["EMAIL"],
+                "phone_number": phone_number,
+            }
+            j += 1
 
-        emp_details = {}
+    return emp_details
 
-        for column in (data):
-
-            if int(column['SALARY']) > 9000:
-                  emp_details['name'] = ((column['FIRST_NAME'] + " " + column['LAST_NAME']))
-                  emp_details['email'] = column['EMAIL']
-                  phone_number = column['PHONE_NUMBER'].split(".")
-                  phone_number = "".join(phone_number)
-                  emp_details['phone numer'] = phone_number
-                  pprint(emp_details)
-
-        return emp_details
 
 if __name__ == "__main__":
-
-    result=main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    result = main()
+    pprint(result)

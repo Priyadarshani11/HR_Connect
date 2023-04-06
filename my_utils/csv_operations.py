@@ -1,9 +1,8 @@
 import csv
 
-
 class HandleCSV:
-    filename = "C:\\Users\\priya\\PycharmProjects\\HRConnect\\static\\employees.csv"
 
+    filename = "C:\\Users\\priya\\PycharmProjects\\HRConnect\\static\\employees.csv"
     @classmethod
     def read_entire_csv(cls):
         with open(cls.filename, "r") as foo:

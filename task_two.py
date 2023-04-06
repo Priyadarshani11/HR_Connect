@@ -31,6 +31,5 @@ def main():
 
     return emp_details
 
-
 if __name__ == "__main__":
     print(main())

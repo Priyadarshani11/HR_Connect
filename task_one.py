@@ -14,8 +14,6 @@ from my_utils.csv_operations import HandleCSV
 
 
 data = HandleCSV.read_entire_csv()
-
-
 def main():
     emp_details = {}
     j = 1
